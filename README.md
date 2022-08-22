@@ -50,7 +50,7 @@ This project is a generator to create random homebrew gods for tabletop rpg's.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Provides a range of deity's with associated names, alignments, and features.;\
+:heavy_check_mark: Provides a range of deity's with associated names, alignments, and features.
 
 ## :rocket: Technologies ##
 
