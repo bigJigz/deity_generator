@@ -68,7 +68,7 @@ $ yarn start
 
 ## :memo: License ##
 
-Made by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{bigJigz}}</a>
+Made by <a href="https://github.com/bigJigz" target="_blank">bigJigz</a>
 
 &#xa0;
 
