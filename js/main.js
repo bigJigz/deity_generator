@@ -12,7 +12,7 @@ generateDeity = (name, title, age, align, type) => {
     align: align,
     type: type,
     description() {
-      let message = `${this.name} the ${this.title} is a ${this.align} ' ' ${this.type} from the ${this.age}.`;
+      let message = `${this.name} the ${this.title} is a ${this.align} deity with the form of a ${this.type} from the ${this.age}.`;
       return message;
     }
   }
@@ -34,7 +34,7 @@ titleGen = (deityAlignment) => {
   let fullTitle = () => {
     if (deityAlignment === 'Lawful Good' || deityAlignment === 'Neutral Good' || deityAlignment === 'Chaotic Good') {
       return titleStart + titleGood[Math.floor(Math.random()*titleGood.length)];
-    } else if (deityAlignment === 'Lawful Evil' || deityAlignment === 'Lawful Neutral' || deityAlignment === 'Chaotic Evil') {
+    } else if (deityAlignment === 'Lawful Evil' || deityAlignment === 'Neutral Evil' || deityAlignment === 'Chaotic Evil') {
       return titleStart + titleEvil[Math.floor(Math.random()*titleEvil.length)];
     } else {
       return titleStart + titleNeutral[Math.floor(Math.random()*titleNeutral.length)];
@@ -67,9 +67,22 @@ typeGen = () => {
 
 let deity = generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()); //store new random deity object
 
-//console.log(generateDeity(nameGen(), ageGen(), alignGen(), typeGen()));
+//console.log(deity);
+//console.log(deity.description());
 
-console.log(deity);
-console.log(deity.description());
+//titleGen console tests
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
+
 
 
