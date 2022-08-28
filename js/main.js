@@ -1,18 +1,16 @@
 
-
-
 console.log('Generate Random Deity');
 
 //↓↓Factory Function Generates Deity↓↓\\
-generateDeity = (name, title, age, align, type) => {
+generateDeity = (name, age, align, type) => {
   return {
     name: name,
-    title: title,
+    title: titleGen(align),
     age: age,
     align: align,
     type: type,
     description() {
-      let message = `${this.name} the ${this.title} is a ${this.align} deity with the form of a ${this.type} from the ${this.age}.`;
+      let message = `${this.name} the ${this.title} is a ${this.align} ${this.type} from the ${this.age}.`;
       return message;
     }
   }
@@ -26,21 +24,20 @@ nameGen = () => {
   return fullName;
 }
 
-titleGen = (deityAlignment) => {
+titleGen = (alignment) => {
   const titleStart = 'Deity of ';
   const titleGood = ['Transition', 'Destinies', 'Salvation', 'Divine Retribution', 'Divine Punishment', 'Restoration', 'Sanctuary'];
   const titleNeutral = ['Storms', 'the Eclipse', 'Eternity', 'Seasons', 'Wealth and Prosperity'];
   const titleEvil = ['War and Power', 'Deception', 'Vengance', 'Carnage', 'Falsity', 'the Depths', 'Turmoil', 'Wrath'];
-  let fullTitle = () => {
-    if (deityAlignment === 'Lawful Good' || deityAlignment === 'Neutral Good' || deityAlignment === 'Chaotic Good') {
-      return titleStart + titleGood[Math.floor(Math.random()*titleGood.length)];
-    } else if (deityAlignment === 'Lawful Evil' || deityAlignment === 'Neutral Evil' || deityAlignment === 'Chaotic Evil') {
-      return titleStart + titleEvil[Math.floor(Math.random()*titleEvil.length)];
+  let fullTitle = '';
+   if (alignment === 'Lawful Good' || alignment === 'Neutral Good' || alignment === 'Chaotic Good') {
+      fullTitle = titleStart + titleGood[Math.floor(Math.random()*titleGood.length)];
+    } else if (alignment === 'Lawful Evil' || alignment === 'Neutral Evil' || alignment === 'Chaotic Evil') {
+      fullTitle = titleStart + titleEvil[Math.floor(Math.random()*titleEvil.length)];
     } else {
-      return titleStart + titleNeutral[Math.floor(Math.random()*titleNeutral.length)];
+      fullTitle = titleStart + titleNeutral[Math.floor(Math.random()*titleNeutral.length)];
     }
-  }
-  return fullTitle();
+  return fullTitle;
 }
 
 ageGen = () => {
@@ -65,24 +62,12 @@ typeGen = () => {
   return fullType;
 }
 
-let deity = generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()); //store new random deity object
+let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
 
-//console.log(deity);
-//console.log(deity.description());
+console.log(deity);
+console.log(deity.description());
 
-//titleGen console tests
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
-console.log(generateDeity(nameGen(), titleGen(generateDeity.align), ageGen(), alignGen(), typeGen()));
 
+//console.log(generateDeity(nameGen(), ageGen(), alignGen(), typeGen()));
 
 
