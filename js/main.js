@@ -5,7 +5,7 @@ console.log('Generate Random Deity');
 generateDeity = (name, age, align, type) => {
   return {
     name: name,
-    title: titleGen(align),
+    title: titleGen(align), //titleGen function takes in align argument when factory object is made 
     age: age,
     align: align,
     type: type,
