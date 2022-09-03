@@ -4,7 +4,7 @@
 }
 
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -30,59 +30,41 @@ body {
 
 .mainsection {
   grid-area: "mainsection";
-  height: 100%;
+  height: fit-content;
   border: 2px solid #C91F37; 
 }
 
-.loadbarcontainer {
-  /* Colors */
-  background-color: rgba(0, 0, 0, 0.1);
-
-  /* Rounded border */
-  border-radius: 9999px;
-
-  margin-top: 1em;
-}
-
-.container__progress {
-  /* Center the content */
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-  /* Colors */
-  background-color: #357edd;
-  color: #fff;
-
-  /* Rounded border */
-  border-radius: 9999px;
-}
 
 /*---Left Menu---*/
 .menubox {
   display: flex;
   flex-direction: column;
   position: relative;
-  justify-content: center;;
+  justify-content: space-around;
   padding: 1em;
   width: 10em;
-  height: 100%
+  height: 700px;
 }
 
 .item1 {
   background-color: none;
 }
 
-/*---Main Section Text---*/
+/*===== DEITY FORM =====*/
+.maincontainer {
+  display: block;
+  height: 700px;
+  padding: 1em;
+}
+
+/*---Main Section Loading Animation---*/
 .titlebox {
   position: relative;
-  top: 20%;
-  left: 38%;
   padding: 1rem;
   height: min-content;
   width: min-content;
 }
-.title {
+.titlebox h1 {
   overflow: hidden;
     border-right: .15em solid rgb(51, 255, 0);
     white-space: nowrap;
@@ -102,7 +84,7 @@ body {
 }
 
 
-/*===CRT Screen Effect===*/
+/*===============CRT Screen Effect================*/
 @keyframes flicker {
   0% {
     opacity: 0.27861;
@@ -196,3 +178,30 @@ body {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+
+
+/* LOADBAR 
+.loadbarcontainer {
+   Colors 
+  background-color: rgba(0, 0, 0, 0.1);
+
+   Rounded border 
+  border-radius: 9999px;
+
+  margin-top: 1em;
+}
+
+.container__progress {
+   Center the content 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+   Colors 
+  background-color: #357edd;
+  color: #fff;
+
+   Rounded border 
+  border-radius: 9999px;
+}
+*/
