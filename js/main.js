@@ -1,5 +1,9 @@
 
+/* console tests
 console.log('Generate Random Deity');
+console.log(deity);
+console.log(deity.description());*/
+
 
 //↓↓Factory Function Generates Deity↓↓\\
 generateDeity = (name, age, align, type) => {
@@ -62,12 +66,27 @@ typeGen = () => {
   return fullType;
 }
 
-let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
+const deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
 
 console.log(deity);
-console.log(deity.description());
 
+const deityName = document.getElementsByClassName('deityname');
+const deityAge = document.getElementsByClassName('deityage');
+const deityAlign = document.getElementsByClassName('deityalign');
+const deityType = document.getElementsByClassName('deitytype');
+const menuItem1 = document.getElementsByClassName('menuitem');
 
-//console.log(generateDeity(nameGen(), ageGen(), alignGen(), typeGen()));
-
-
+returnDeity = () => {
+  if (deityName === true) {
+    return deityName.innerHTML = `NAME: ${deity.name}`;
+  }
+  if (deityAge === true) {
+    return deityAge.innerHTML = `AGE: ${deity.age}`;
+  }
+  if (deityAlign === true) {
+    return deityAlign.innerHTML = `ALIGNMENT: ${deity.align}`;
+  }
+  if (deityType === true) {
+    return deityType.innerHTML = `TYPE: ${deity.type}`;
+  }
+}

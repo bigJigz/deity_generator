@@ -7,15 +7,24 @@
   padding:0;
 }
 
-html {
-  height: 100vh;
-}
-
 body {
   font-family: "This Sucks";
   background-color: #292F2E;
   color: #86DC27;
   min-height: 100%;
+}
+
+footer {
+  padding-left: 2.3em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #86DC27;
+  text-decoration: none;
 }
 
 /*=====Grid Page Layout=====*/
@@ -54,7 +63,7 @@ body {
   filter:blur(3px);
   opacity:.5;
   transform: scale(.98);
-  box-shadow:none;
+  box-shadow: none;
 }
 .menubox:hover .menuitem:hover {
   transform:scale(1);
@@ -91,7 +100,6 @@ body {
 .statblock li {
   display: flex;
   position: relative;
-  list-style: none;
   padding: 4em;
 }
 
@@ -121,6 +129,11 @@ body {
   to { border-color: rgb(47, 235, 0)}
 }
 
+/*===== Footer List =====*/
+
+.infolist li {
+  padding-bottom: 1em;
+}
 
 /*===============CRT Screen Effect================*/
 @keyframes flicker {
