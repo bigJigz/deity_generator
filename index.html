@@ -4,16 +4,15 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="/js/main.js"></script>
-    <!--<link href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">-->
   </head>
   <body>
-    <main class="layout">
+    <main class="layout crt">
       <section class="sidebar">
-        <nav class="menubox crt">
-          <button class="item1"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
-          <button class="item1"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
-          <button class="item1"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
-          <button class="item1"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
+        <nav class="menubox">
+          <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
+          <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
+          <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
+          <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
         </nav>
       </section>
       <section class="mainsection">
@@ -21,9 +20,12 @@
           <div class="titlebox">
             <h1>Loading Jigz Deity Generator...</h1>
           </div>
-          <form class="deityform">
-            <label for="name"></label> 
-          </form>
+          <ul class="statblock">
+              <li id="deityname">NAME:</li>
+              <li id="dietyage">AGE:</li>     
+              <li id="dietyalign">ALIGNMENT:</li>
+              <li id="dietytype">TYPE:</li>         
+          </ul>
         </div>
       </section>
     
@@ -32,7 +34,11 @@
 
   </body>
   <footer>
-
+    <ul>
+      <li>About</li>
+      <li>Github</li>
+      <li>Liscencing</li>
+    </ul>
 
   </footer>
 

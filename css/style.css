@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "This Sucks";
+  src: url('../resources/This Sucks.ttf') format('truetype');
+}
 * {
   margin:0;
   padding:0;
@@ -8,13 +12,13 @@ html {
 }
 
 body {
+  font-family: "This Sucks";
   background-color: #292F2E;
   color: #86DC27;
   min-height: 100%;
 }
 
-/*---Grid Page Layout 1920x1080---*/
-
+/*=====Grid Page Layout=====*/
 .layout {
   display: grid;
   grid: "sidebar mainsection" 1fr / 1fr 9fr;
@@ -25,17 +29,16 @@ body {
 .sidebar { /* Menu Bar - Left */
   grid-area: "sidebar";
   height: fit-content;
-  border:2px solid #C91F37;
+  border:2px dotted #C91F37;
 }
 
 .mainsection {
   grid-area: "mainsection";
   height: fit-content;
-  border: 2px solid #C91F37; 
+  border: 2px dotted #C91F37;
 }
 
-
-/*---Left Menu---*/
+/*===== Nav Menu =====*/
 .menubox {
   display: flex;
   flex-direction: column;
@@ -44,20 +47,55 @@ body {
   padding: 1em;
   width: 10em;
   height: 700px;
+  min-height: auto;
 }
 
-.item1 {
-  background-color: none;
+.menubox:hover .menuitem {
+  filter:blur(3px);
+  opacity:.5;
+  transform: scale(.98);
+  box-shadow:none;
+}
+.menubox:hover .menuitem:hover {
+  transform:scale(1);
+  filter:blur(0px);
+  opacity:1;
+  /*box-shadow:0 8px 20px 0px rgba(0,0,0,0.125);*/
 }
 
-/*===== DEITY FORM =====*/
+.menuitem {
+  background-color: #292F2E;
+  border:1px solid #292F2E;
+  /*box-shadow:0 2px 3px 0px rgba(0,0,0,0.25);*/
+  border-radius:3px;
+  transition:.2s all; 
+}
+
+/*===== DEITY STATBLOCK =====*/
 .maincontainer {
   display: block;
   height: 700px;
   padding: 1em;
 }
 
-/*---Main Section Loading Animation---*/
+.statblock {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin: 1em;
+  padding: 1em;
+  border: 2px dotted #C91F37;
+  
+}
+
+.statblock li {
+  display: flex;
+  position: relative;
+  list-style: none;
+  padding: 4em;
+}
+
+/*===== Main Section Loading Animation =====*/
 .titlebox {
   position: relative;
   padding: 1rem;
@@ -178,30 +216,3 @@ body {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
-
-
-/* LOADBAR 
-.loadbarcontainer {
-   Colors 
-  background-color: rgba(0, 0, 0, 0.1);
-
-   Rounded border 
-  border-radius: 9999px;
-
-  margin-top: 1em;
-}
-
-.container__progress {
-   Center the content 
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-   Colors 
-  background-color: #357edd;
-  color: #fff;
-
-   Rounded border 
-  border-radius: 9999px;
-}
-*/
