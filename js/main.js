@@ -66,7 +66,7 @@ typeGen = () => {
   return fullType;
 }
 
-let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
+let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen());
 
 const deityName = document.getElementById('deityname');
 const deityAge = document.getElementById('deityage');
@@ -74,25 +74,24 @@ const deityAlign = document.getElementById('deityalign');
 const deityType = document.getElementById('deitytype');
 
 function changeName(name) {
-  deityName.innerHTML = `NAME: ${name}`;
+  deityName.innerHTML = `&nbsp;&nbsp;${name}`;
 }
 function changeAge(age) {
-  deityAge.innerHTML = `AGE: ${age}`;
+  deityAge.innerHTML = `&nbsp;&nbsp;${age}`;
 }
 function changeAlign(align) {
-  deityAlign.innerHTML = `ALIGNMENT: ${align}`;
+  deityAlign.innerHTML = `&nbsp;&nbsp;${align}`;
 }
 function changeType(type) {
-  deityType.innerHTML = `TYPE: ${type}`;
+  deityType.innerHTML = `&nbsp;&nbsp;${type}`;
 }
 
+//↓↓ RANDOMIZER BUTTON ↓↓\\
 randomize = () => {
-  deity.name = nameGen();
-  deity.age = ageGen();
-  deity.align = alignGen();
-  deity.type = typeGen();
+  let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen());
   changeName(deity.name);
   changeAge(deity.age);
   changeAlign(deity.align);
   changeType(deity.type);
+  
 }
