@@ -93,5 +93,4 @@ randomize = () => {
   changeAge(deity.age);
   changeAlign(deity.align);
   changeType(deity.type);
-  
 }
