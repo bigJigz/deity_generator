@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="/deity_generator/js/main.js" typ="text/javascript"></script>
+    
   </head>
   <body>
     <main class="layout crt">
       <section class="sidebar">
         <nav class="menubox">
-          <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
+          <button class="menuitem" onclick="randomize()"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
           <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
           <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
           <button class="menuitem"><img src="resources/N64_MemoryKakucyoPack(112x112).png"></button>
@@ -21,17 +21,17 @@
             <h1>Loading Jigz Deity Generator...</h1>
           </div>
           <ul class="statblock">
-              <li class="deityname">NAME:</li>
-              <li class="deityage">AGE:</li>     
-              <li class="deityalign">ALIGNMENT:</li>
-              <li class="deitytype">TYPE:</li>         
+              <li id="deityname">NAME:</li>
+              <li id="deityage">AGE:</li>     
+              <li id="deityalign">ALIGNMENT:</li>
+              <li id="deitytype">TYPE:</li>         
           </ul>
         </div>
       </section>
     
     </main>
     
-
+    <script src="js/main.js" type="text/javascript"></script>
   </body>
   <footer>
     <ul class="infolist">

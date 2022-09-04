@@ -66,27 +66,33 @@ typeGen = () => {
   return fullType;
 }
 
-const deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
+let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen()); //store new random deity object
 
-console.log(deity);
+const deityName = document.getElementById('deityname');
+const deityAge = document.getElementById('deityage');
+const deityAlign = document.getElementById('deityalign');
+const deityType = document.getElementById('deitytype');
 
-const deityName = document.getElementsByClassName('deityname');
-const deityAge = document.getElementsByClassName('deityage');
-const deityAlign = document.getElementsByClassName('deityalign');
-const deityType = document.getElementsByClassName('deitytype');
-const menuItem1 = document.getElementsByClassName('menuitem');
+function changeName(name) {
+  deityName.innerHTML = `NAME: ${name}`;
+}
+function changeAge(age) {
+  deityAge.innerHTML = `AGE: ${age}`;
+}
+function changeAlign(align) {
+  deityAlign.innerHTML = `ALIGNMENT: ${align}`;
+}
+function changeType(type) {
+  deityType.innerHTML = `TYPE: ${type}`;
+}
 
-returnDeity = () => {
-  if (deityName === true) {
-    return deityName.innerHTML = `NAME: ${deity.name}`;
-  }
-  if (deityAge === true) {
-    return deityAge.innerHTML = `AGE: ${deity.age}`;
-  }
-  if (deityAlign === true) {
-    return deityAlign.innerHTML = `ALIGNMENT: ${deity.align}`;
-  }
-  if (deityType === true) {
-    return deityType.innerHTML = `TYPE: ${deity.type}`;
-  }
+randomize = () => {
+  deity.name = nameGen();
+  deity.age = ageGen();
+  deity.align = alignGen();
+  deity.type = typeGen();
+  changeName(deity.name);
+  changeAge(deity.age);
+  changeAlign(deity.align);
+  changeType(deity.type);
 }
