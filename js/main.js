@@ -72,6 +72,7 @@ const deityName = document.getElementById('deityname');
 const deityAge = document.getElementById('deityage');
 const deityAlign = document.getElementById('deityalign');
 const deityType = document.getElementById('deitytype');
+const deityTitle = document.getElementById('deitytitle');
 
 function changeName(name) {
   deityName.innerHTML = `&nbsp;&nbsp;${name}`;
@@ -86,6 +87,10 @@ function changeType(type) {
   deityType.innerHTML = `&nbsp;&nbsp;${type}`;
 }
 
+function changeTitle(title) {
+  deityTitle.innerHTML = `&nbsp;&nbsp;${title}`;
+}
+
 //↓↓ RANDOMIZER BUTTON ↓↓\\
 randomize = () => {
   let deity = generateDeity(nameGen(), ageGen(), alignGen(), typeGen());
@@ -93,4 +98,5 @@ randomize = () => {
   changeAge(deity.age);
   changeAlign(deity.align);
   changeType(deity.type);
+  changeTitle(deity.title);
 }
